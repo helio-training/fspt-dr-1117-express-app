@@ -30,7 +30,8 @@ app.use((req, res, next) => {
     } else if (auth === "IAmGroot") {
         console.log("User is present")
     } else {
-        res.status(403).send("Invalid Auth Header")
+        console.log("Invalid Auth Header: Treating you as a guest")
+        //res.status(403).send("Invalid Auth Header")
     }
     next()
 })
